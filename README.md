@@ -1,10 +1,10 @@
 # Project Name:
 
 ## Problem
-Describe the problem that your project seeks to solve
+boredem or people not having enough entertainment
 
 ## Big Fat Idea
-Write your "Big Fat Idea" here. 
+to help kids to have more games 
 
 ## First Agile Iteration
-What can you accomplish in about 4 weeks?
+to make a game 
