@@ -12,18 +12,59 @@ def test(did_pass):
     print(msg)
     
 def startgame(choice=None):
-    print("My first agile Iteration is to make a test based game. This game will include dragons, levels, other monsters and trap doors. This is my first step because kids will have fun playing this game. Also, this is my first step because I do not know how to make any other games")
+    print("You are at two doors. Which door will you choose?")
     if choice==None:
-        choice=input("knife or hammer")
-    if choice=="knife":
-            return"knife"
+        choice=input("1 or 2")
+    if choice=="1":
+        print("If 1 you will go through the door and  you will find a knife and monsters")
     else:
-            return"hammer"
-
+        print("you will fall into a trap")
+    return choice
+ 
+ 
+def door1(choice=None):
+    if choice==None:
+        choice=input("fight or flee")
+    if choice=="fight":
+        print("you die")
+        return "dead"
+    else:
+        print("you run away and go back to the two doors")
+        return"start"
+def door2(stuff=None):
+    print(" you fall into a trap and find yourself one to a ice floor")
+    if stuff=="knife":
+        print("lucky you have a knife to climb out of the slide")
+        return "survive"
+    else:
+        print("without a knife you slide to your death")
+        return "dead"
+    
+   
 def test_suite():
           
           
-    test(startgame()=="knife")
-    
-startgame()
+    test(startgame("1")=="1")
+    test(startgame("2")=="2")
+    test(door1("fight")=="dead")
+    test(door1("flee")=="start")
+    test(door2()=="dead")
+    test(door2("knife")=="survive")
+"""
+if startgame()=="knife":
+    escape_bridge()
+else:
+    print("you lose")
+"""
 test_suite()
+def main(stuff=None):   
+    if startgame()=="1":
+        if door1()=="dead":
+            main()
+        else:
+            main("knife")
+    else:
+        door2(stuff)
+
+       
+    
