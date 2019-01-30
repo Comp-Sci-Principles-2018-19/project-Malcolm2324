@@ -67,4 +67,4 @@ def main(stuff=None):
         door2(stuff)
 
        
-    
+main()
