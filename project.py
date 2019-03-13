@@ -57,14 +57,20 @@ else:
     print("you lose")
 """
 #test_suite()
-def main(stuff=None):   
-    if startgame()=="1":
-        if door1()=="dead":
-            main()
+def main():
+    stuff=None
+    while True:
+        
+        if startgame()=="1":
+            if door1()=="dead":
+               continue
+            else:
+                stuff="knife"
+                continue
+                
         else:
-            main("knife")
-    else:
-        if door2(stuff)=="dead":
-            main()
+            if door2(stuff)=="dead":
+                stuff=None
+                continue
         
 main()
