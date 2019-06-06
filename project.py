@@ -32,7 +32,7 @@ def door1(choice=None):
         print("you run away and go back to the two doors")
         return"start"
 def door2(stuff=None):
-    print(" you fall into a trap and find yourself one to a ice floor")
+    print(" you fall into a trap and find yourself on to a ice floor")
     if stuff=="knife":
         print("lucky you have a knife to climb out of the slide")
         return "survive"
